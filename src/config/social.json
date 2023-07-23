@@ -1,6 +1,13 @@
 {
   "main": [
     {
+      "name": "linkedin",
+      "icon": "FaLinkedinIn",
+      "link": "https://www.linkedin.com/"
+    }
+  ],
+  "commented_out": [
+    {
       "name": "facebook",
       "icon": "FaFacebook",
       "link": "https://www.facebook.com/"
@@ -14,11 +21,6 @@
       "name": "github",
       "icon": "FaGithub",
       "link": "https://www.github.com/"
-    },
-    {
-      "name": "linkedin",
-      "icon": "FaLinkedin",
-      "link": "https://www.linkedin.com/"
     }
   ]
 }

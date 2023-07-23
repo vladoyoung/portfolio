@@ -1,8 +1,8 @@
 {
-  "name": "astroplate",
+  "name": "vlad-portfolio",
   "version": "1.3.2",
-  "description": "Astro and Tailwindcss boilerplate",
-  "author": "zeon.studio",
+  "description": "My personal website",
+  "author": "Vladislav Nikolov",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
