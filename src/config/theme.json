@@ -3,9 +3,10 @@
     "default": {
       "theme_color": {
         "primary": "#404040",
+        "secondary": "#e25858",
         "body": "#fff",
         "border": "#bababa",
-        "theme_light": "#f6f6f6",
+        "theme_light": "#FAFAFA",
         "theme_dark": ""
       },
       "text_color": {
@@ -23,7 +24,7 @@
         "theme_dark": ""
       },
       "text_color": {
-        "default": "#B4AFB6",
+        "default": "#FFFFFF",
         "dark": "#fff",
         "light": "#B4AFB6"
       }

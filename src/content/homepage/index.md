@@ -1,13 +1,13 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Astro Project"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
-  image: "/images/banner.png"
+  label: "Hi, I'm"
+  title: "Vlad"
+  subtitle: "Full-Stack Web Developer"
   button:
     enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/astroplate"
+    label: "Latest Projects"
+    link: "/projects"
 
 # Features
 features:
@@ -50,4 +50,47 @@ features:
       enable: false
       label: ""
       link: ""
+
+# About
+about:
+  title: "Let's **build** something!"
+  description: "My passion for innovation and continuous learning drives me to stay at the forefront of the industry, delivering high-quality solutions that exceed expectations and contribute to the success of every project I undertake."
+  skills:
+    - title: "Development"
+      bulletpoints:
+        - "React"
+        - "Vue"
+        - "Alpine"
+        - "Typescript"
+        - "Gatsby"
+        - "Astro"
+        - "Node"
+        - "Vite"
+        - "Git"
+        - "Gulp"
+        - "NPM"
+        - "JS"
+        - "PHP"
+        - "CSS"
+        - "HTML"
+
+    - title: "Other"
+      bulletpoints:
+        - "Tailwind"
+        - "Bootstrap"
+        - "UX & UI"
+        - "SEO"
+        - "Marketing"
+        - "MailChimp"
+        - "Project management"
+        - "KANBAN"
+        - "Code reviews"
+        - "Adobe Creative Suite"
+        - "Storybook"
+        - "Figma"
+
+  button:
+    enable: false
+    label: "About me"
+    link: "/about"
 ---

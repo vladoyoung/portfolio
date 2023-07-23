@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
+  @apply inline-block rounded-full border-transparent px-12 py-4 font-semibold capitalize transition;
 }
 
 .btn-sm {
@@ -11,5 +11,5 @@
 }
 
 .btn-outline-primary {
-  @apply border-dark bg-transparent text-dark no-underline hover:bg-dark hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark;
+  @apply border border-dark bg-transparent text-dark no-underline hover:bg-dark hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark;
 }

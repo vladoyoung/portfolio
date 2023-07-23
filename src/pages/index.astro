@@ -3,59 +3,101 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
-import type { Button, Feature } from "@/types";
+import type { Button, Feature, Skill } from "@/types";
 import { Image } from "@astrojs/image/components";
 import { getEntryBySlug } from "astro:content";
 import { FaCheck } from "react-icons/fa/index.js";
+import Button from "@/shortcodes/Button";
+import About from "./about.astro";
 
 interface Homepage {
   banner: {
+    label: string;
     title: string;
-    content: string;
+    subtitle: string;
     image: string;
     button: Button;
   };
   features: Feature[];
+  about: {
+    title: string;
+    description: string;
+    skills: Skill[];
+    button: Button;
+  }
 }
 
 const homepage = await getEntryBySlug("homepage", "index");
 const testimonial = await getEntryBySlug("sections", "testimonial");
 const call_to_action = await getEntryBySlug("sections", "call-to-action");
-const { banner, features }: Homepage = homepage.data;
+const { banner, features, about }: Homepage = homepage.data;
 ---
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-14">
+  <section class="section min-h-screen flex justify-center items-center relative">
     <div class="container">
-      <div class="row justify-center">
-        <div class="mb-16 text-center lg:col-7">
-          <h1 set:html={markdownify(banner.title)} class="mb-4" />
-          <p set:html={markdownify(banner.content)} class="mb-8" />
+      <div class="flex md:flex-row flex-col justify-center md:items-center items-start md:gap-16 gap-10">
+        <div class="basis-2/6">
+          <div class="relative lg:max-w-[420px] max-w-[300px]">
+            <img class="w-full animate-morph" src="/images/me.jpg" alt="Me!" />
+            <div class="border-8 border-white/50 dark:border-black/50 animate-morph absolute w-full h-full top-0 left-0"></div>
+          </div>
+          <!-- <div class="bg-no-repeat bg-center bg-cover w-[300px] h-[300px] animate-morph " style="background-image: url('/images/me.jpg')" alt="Me!" /> -->
+
+        </div>
+        <div class="basis-4/6">
+          <span set:html={markdownify(banner.label)} class="label lg:text-3xl md:text-2xl text-xl" />
+          <h1 class="mb-4 herotext">
+            {markdownify(banner.title)}
+            <br/>
+            <strong class="text-secondary">{markdownify(banner.subtitle)}</strong>
+          </h1>
           {
             banner.button.enable && (
-              <a class="btn btn-primary" href={banner.button.link}>
-                {banner.button.label}
-              </a>
+              <Button className="lg:mt-6 my-4" label={banner.button.label} link={banner.button.link} style="solid"/>
             )
           }
         </div>
+      </div>
+    </div>
+    <div id="parallax-effects" class="absolute top-0 left-0 w-full h-full">
+      <div class="w-full h-full" data-depth="0.5">
+        <div class="w-40 h-40 border border-border absolute top-20"></div>
+      </div>
+    <div>
+  </section>
+  <!-- /Banner -->
+
+  <section class={`section bg-theme-light dark:bg-darkmode-theme-light`}>
+    <div class="container flex lg:flex-row flex-col gap-20">
+      <div class="basis-1/2">
+        <h2 set:html={markdownify(about.title)} class="mb-4 [&>strong]:text-secondary" />
+        <p set:html={markdownify(about.description)} class="mb-8 text-lg" />
         {
-          banner.image && (
-            <div class="col-12">
-              <img
-                src={banner.image}
-                width="1272"
-                height="403"
-                alt="banner image"
-              />
-            </div>
+          banner.button.enable && (
+            <Button label={about.button.label} link={about.button.link} style="solid"/>
           )
         }
       </div>
+      <div class="basis-1/2">
+        <h3 set:html={"Skills:"} class="mb-4"/>
+        <div class="flex sm:flex-row flex-col gap-12">
+          {about.skills.map((skill) => (
+            <div class="relative mb-4 basis-1/2">
+              <h5 set:html={markdownify(skill.title)} class="mb-4"/>
+              <ul class="inline-flex flex-row flex-wrap gap-2">
+                {skill.bulletpoints.slice(0, 6).map((bullet: string) => (
+                  <li class="inline-flex bg-secondary text-white px-4 py-2 rounded-full" set:html={markdownify(bullet)}/>
+                ))}
+                <li class="inline-flex bg-primary text-white px-4 py-2 rounded-full" set:html={"see more"}/>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
-  <!-- /Banner -->
 
   <!-- Features -->
   {
@@ -102,3 +144,11 @@ const { banner, features }: Homepage = homepage.data;
   <Testimonial testimonial={testimonial} />
   <CallToAction call_to_action={call_to_action} />
 </Base>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script type="text/javascript">
+  var scene = document.getElementById("parallax-effects");
+  new Parallax(scene, {
+    relativeInput: true,
+  });
+</script>

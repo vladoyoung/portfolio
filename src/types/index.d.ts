@@ -6,6 +6,11 @@ export type Feature = {
   title: string;
 };
 
+export type Skill = {
+  title: string;
+  bulletpoints: string[];
+};
+
 export type Button = {
   enable: boolean;
   label: string;
