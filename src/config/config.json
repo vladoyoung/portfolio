@@ -18,7 +18,7 @@
     "theme_switcher": true,
     "default_theme": "system",
     "pagination": 8,
-    "summary_length": 200,
+    "summary_length": 160,
     "projects_folder": "projects"
   },
 
@@ -31,12 +31,6 @@
     "enable": true,
     "label": "Resume/CV",
     "link": "https://github.com/zeon-studio/astroplate"
-  },
-
-  "disqus": {
-    "enable": false,
-    "shortname": "themefisher-template",
-    "settings": {}
   },
 
   "metadata": {

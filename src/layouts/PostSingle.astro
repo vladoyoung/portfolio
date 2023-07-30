@@ -1,7 +1,6 @@
 ---
 import BlogCard from "@/components/BlogCard.astro";
 import config from "@/config/config.json";
-import Disqus from "@/helpers/Disqus";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
@@ -22,15 +21,15 @@ const { title, description, categories, image, date, tags } = post.data;
 
 <section class="section pt-7">
   <div class="container">
-    <div class="row justify-center">
-      <article class="lg:col-10">
+    <div class="justify-center">
+      <article class="max-w-5xl mx-auto">
         {
           image && (
             <div class="mb-10">
               <Image
                 src={image}
-                height={500}
-                width={1200}
+                height={512}
+                width={1024}
                 alt={title}
                 class="w-full rounded"
               />
@@ -73,17 +72,15 @@ const { title, description, categories, image, date, tags } = post.data;
             </ul>
           </div>
         </div>
-        <Disqus className="mt-20" client:load />
       </article>
     </div>
 
-    <!-- Related posts -->
-    <div class="section pb-0">
-      <h2 class="h3 mb-12 text-center">Related Posts</h2>
+    <div class="section">
+      <h2 class="h2 mb-12 text-center">Related <span class="text-secondary">Projects</span></h2>
       <div class="row justify-center">
         {
-          similarPosts.map((post) => (
-            <div class="lg:col-4">
+          similarPosts?.slice(0, 2).map((post) => (
+            <div class="md:basis-1/2 basis-full">
               <BlogCard data={post} />
             </div>
           ))
