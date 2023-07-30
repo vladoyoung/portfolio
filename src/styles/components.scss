@@ -26,9 +26,9 @@
   li {
     @apply inline-block;
     a {
-      @apply flex h-9 w-9 items-center justify-center rounded bg-primary text-center leading-9 text-white dark:bg-darkmode-primary dark:text-dark;
+      @apply flex h-9 w-9 items-center justify-center rounded-full bg-primary text-center leading-9 text-white dark:bg-darkmode-primary dark:text-dark;
       svg {
-        @apply h-5 w-5;
+        @apply h-4 w-4;
       }
     }
   }

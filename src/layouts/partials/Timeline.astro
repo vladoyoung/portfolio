@@ -1,0 +1,33 @@
+---
+import { getEntryBySlug } from "astro:content";
+import { markdownify } from "@/lib/utils/textConverter";
+const timeline = await getEntryBySlug("sections", "timeline");
+---
+
+{
+  timeline.data.enable && (
+  <section class="section flex lg:max-w-screen-md mx-auto lg:pl-0 pl-9">
+    <ol class="container relative border-l border-primary pl-0">
+      {timeline.data.entries.map(
+        (entry: {
+          title: string;
+          duration: string;
+          emoji: string;
+          content: string;
+        }) => (
+          <li class="mb-10 ml-4">
+            <div class="absolute flex justify-center items-center text-center align-bottom lg:w-12 w-10 lg:h-12 h-10 bg-theme-light dark:bg-theme-dark lg:text-2xl text-xl rounded-md -left-6 border border-primary">
+              {entry.emoji}
+            </div>
+            <div class="lg:ml-10 sm:ml-6 ml-4">
+              <time class="mb-1 text-sm font-normal leading-none text-primary dark:text-border">{entry.duration}</time>
+              <h3 class="md:text-lg text-base font-semibold text-primary mb-2">{entry.title}</h3>
+              <p class="sm:text-base text-sm !leading-relaxed content text-primary dark:text-white content" set:html={markdownify(entry.content)}/>
+            </div>
+          </li>
+        )
+      )}
+    </ol>
+ </section>
+  )
+}

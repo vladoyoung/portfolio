@@ -55,39 +55,6 @@ features:
 about:
   title: "Let's **build** something!"
   description: "My passion for innovation and continuous learning drives me to stay at the forefront of the industry, delivering high-quality solutions that exceed expectations and contribute to the success of every project I undertake."
-  skills:
-    - title: "Development"
-      bulletpoints:
-        - "React"
-        - "Vue"
-        - "Alpine"
-        - "Typescript"
-        - "Gatsby"
-        - "Astro"
-        - "Node"
-        - "Vite"
-        - "Git"
-        - "Gulp"
-        - "NPM"
-        - "JS"
-        - "PHP"
-        - "CSS"
-        - "HTML"
-
-    - title: "Other"
-      bulletpoints:
-        - "Tailwind"
-        - "Bootstrap"
-        - "UX & UI"
-        - "SEO"
-        - "Marketing"
-        - "MailChimp"
-        - "Project management"
-        - "KANBAN"
-        - "Code reviews"
-        - "Adobe Creative Suite"
-        - "Storybook"
-        - "Figma"
 
   button:
     enable: false

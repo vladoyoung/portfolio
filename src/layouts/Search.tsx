@@ -8,7 +8,7 @@ import {
   FaSearch,
 } from "react-icons/fa/index.js";
 
-const { summary_length, blog_folder } = config.settings;
+const { summary_length, projects_folder } = config.settings;
 
 export type SearchItem = {
   slug: string;
@@ -131,19 +131,11 @@ const Search = ({ searchList }: Props) => {
                     />
                   )}
                   <h4 className="mb-3">
-                    <a href={`/${blog_folder}/${item.slug}`}>
+                    <a href={`/${projects_folder}/${item.slug}`}>
                       {item.data.title}
                     </a>
                   </h4>
                   <ul className="mb-4">
-                    <li className="mr-4 inline-block">
-                      <a href={`/authors/${slugify(item.data.author)}`}>
-                        <FaRegUserCircle
-                          className={"-mt-1 mr-2 inline-block"}
-                        />
-                        {humanize(item.data.author)}
-                      </a>
-                    </li>
                     <li className="mr-4 inline-block">
                       <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
                       {item.data.categories.map(
@@ -164,7 +156,7 @@ const Search = ({ searchList }: Props) => {
                   </p>
                   <a
                     className="btn btn-outline-primary btn-sm"
-                    href={`/${blog_folder}/${item.slug}`}
+                    href={`/${projects_folder}/${item.slug}`}
                   >
                     read more
                   </a>

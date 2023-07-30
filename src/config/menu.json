@@ -26,6 +26,10 @@
           "url": "/blog"
         },
         {
+          "name": "Projects",
+          "url": "/projects"
+        },
+        {
           "name": "Authors",
           "url": "/authors"
         },

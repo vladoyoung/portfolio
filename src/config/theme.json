@@ -7,7 +7,7 @@
         "body": "#fff",
         "border": "#bababa",
         "theme_light": "#FAFAFA",
-        "theme_dark": ""
+        "theme_dark": "#404040"
       },
       "text_color": {
         "default": "#404040",

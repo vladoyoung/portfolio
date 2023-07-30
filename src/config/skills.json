@@ -1,0 +1,136 @@
+{
+  "main": [
+    {
+      "name": "Front-end",
+      "items": [
+        {
+          "name": "React",
+          "icon": "/images/skills/frontend/react.svg"
+        },
+        {
+          "name": "Vue",
+          "icon": "/images/skills/frontend/vue.svg"
+        },
+        {
+          "name": "Typescript",
+          "icon": "/images/skills/frontend/typescript.svg"
+        },
+        {
+          "name": "JSX",
+          "icon": "/images/skills/frontend/jsx.svg"
+        },
+        {
+          "name": "Tailwind",
+          "icon": "/images/skills/frontend/tailwind.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "icon": "/images/skills/frontend/bootstrap.svg"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "/images/skills/frontend/styled_components.svg"
+        },
+        {
+          "name": "Astro",
+          "icon": "/images/skills/frontend/astro.svg"
+        },
+        {
+          "name": "Vite",
+          "icon": "/images/skills/frontend/vite.svg"
+        },
+        {
+          "name": "Alpine",
+          "icon": "/images/skills/frontend/alpine.svg"
+        },
+        {
+          "name": "Gatsby",
+          "icon": "/images/skills/frontend/gatsby.svg"
+        },
+        {
+          "name": "Webpack",
+          "icon": "/images/skills/frontend/webpack.svg"
+        }
+      ]
+    },
+    {
+      "name": "Back-end",
+      "items": [
+        {
+          "name": "PHP",
+          "icon": "/images/skills/backend/php.svg"
+        },
+        {
+          "name": "Node",
+          "icon": "/images/skills/backend/node.svg"
+        },
+        {
+          "name": "Docker",
+          "icon": "/images/skills/backend/docker.svg"
+        },
+        {
+          "name": "Mysql",
+          "icon": "/images/skills/backend/mysql.svg"
+        }
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "items": [
+        {
+          "name": "GraphQL",
+          "icon": "/images/skills/infrastructure/graphql.svg"
+        },
+        {
+          "name": "Github",
+          "icon": "/images/skills/infrastructure/github.svg"
+        },
+        {
+          "name": "Bitbucket",
+          "icon": "/images/skills/infrastructure/bitbucket.svg"
+        },
+        {
+          "name": "Npm",
+          "icon": "/images/skills/infrastructure/npm.svg"
+        }
+      ]
+    },
+    {
+      "name": "Integrations",
+      "items": [
+        {
+          "name": "Storybook",
+          "icon": "/images/skills/integrations/storybook.svg"
+        },
+        {
+          "name": "Stripe",
+          "icon": "/images/skills/integrations/stripe.svg"
+        },
+        {
+          "name": "WordPress",
+          "icon": "/images/skills/integrations/wordpress.svg"
+        },
+        {
+          "name": "Storyblok",
+          "icon": "/images/skills/integrations/storyblok.svg"
+        },
+        {
+          "name": "Algolia",
+          "icon": "/images/skills/integrations/algolia.svg"
+        },
+        {
+          "name": "Contentful",
+          "icon": "/images/skills/integrations/contentful.svg"
+        },
+        {
+          "name": "Magento",
+          "icon": "/images/skills/integrations/magento.svg"
+        },
+        {
+          "name": "Mailchimp",
+          "icon": "/images/skills/integrations/mailchimp.svg"
+        }
+      ]
+    }
+  ]
+}

@@ -6,19 +6,21 @@ const Button = ({
   link,
   style,
   rel,
+  target,
   className
 }: {
   label: string;
   link: string;
   style?: string;
   rel?: string;
+  target?: string;
   class?: string;
   className?: string;
 }) => {
   return (
     <a
       href={link}
-      target="_blank"
+      target={target}
       rel={`noopener noreferrer ${
         rel ? (rel === "follow" ? "" : rel) : "nofollow"
       }`}
@@ -26,8 +28,8 @@ const Button = ({
         style === "outline" ? "btn-outline-primary" : "btn-primary"
       } ${className ? className : ''}`}
     >
-      <span class="group-hover:-translate-x-0.5 transition-transform duration-300">{label}</span>
-      <DynamicIcon class="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-300" icon={'FaArrowRight'} />
+      <span className="group-hover:-translate-x-0.5 transition-transform duration-300">{label}</span>
+      <DynamicIcon className="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-300" icon={'FaArrowRight'} />
     </a>
   );
 };

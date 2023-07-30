@@ -1,0 +1,29 @@
+---
+import skills from "@/config/skills.json";
+
+export interface Skill {
+  name: string;
+  icon: string;
+}
+
+export interface SkillCategory {
+  name: string;
+  items: Skill[];
+}
+---
+
+<div class="relative w-full flex flex-col justify-center items-center">
+  <h3 class="mb-6">Some of my <strong class="text-secondary">skills</strong>:</h3>
+  <div class="relative flex flex-row flex-wrap items-center justify-center gap-6 text-sm text-primary dark:text-white">
+    {skills.main.map((skillCategory: SkillCategory) => (
+      skillCategory.items.slice(0, 3).map((skill: Skill) => (
+          <div class="flex flex-col justify-center items-center gap-4">
+            <img src={skill.icon} alt={skill.name + ' skill icon'} class="h-10"/>
+            <span>{skill.name}</span>
+          </div>
+      ))
+    ))}
+  </div>
+  <a href="/about" class="underline mt-4">& more here</a>
+</div>
+

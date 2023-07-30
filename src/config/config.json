@@ -14,12 +14,12 @@
 
   "settings": {
     "search": false,
-    "sticky_header": true,
+    "sticky_header": false,
     "theme_switcher": true,
     "default_theme": "system",
     "pagination": 2,
     "summary_length": 200,
-    "blog_folder": "blog"
+    "projects_folder": "projects"
   },
 
   "params": {

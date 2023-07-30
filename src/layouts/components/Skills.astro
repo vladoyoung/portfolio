@@ -1,0 +1,69 @@
+---
+import skills from "@/config/skills.json";
+
+export interface Skill {
+  name: string;
+  icon: string;
+}
+
+export interface SkillCategory {
+  name: string;
+  items: Skill[];
+}
+---
+
+<div
+  x-data="{
+    tabSelected: 1,
+    tabId: $id('tabs'),
+    tabButtonClicked(tabButton){
+      this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
+      this.tabRepositionMarker(tabButton);
+    },
+    tabRepositionMarker(tabButton){
+      this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
+    },
+    tabButtonActive(tabButton){
+      return this.tabSelected == tabButton.id.replace(this.tabId + '-', '');
+    },
+    tabContentActive(tabContent){
+      return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
+    }
+  }"
+  x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);" class="relative w-full"
+>
+  <h3 class="mb-6 text-center">Some of my <strong class="text-secondary">skills</strong>:</h3>
+  <div x-ref="tabButtons" class="relative flex flex-row items-center justify-center w-full py-1 px-1 text-white bg-theme-light dark:bg-darkmode-theme-light border border-primary dark:border-white rounded-full select-none">
+    {skills.main.map((skillCategory: SkillCategory) => (
+      <button
+        x-bind:id="$id(tabId)"
+        x-on:click="tabButtonClicked($el);"
+        type="button"
+        x-bind:class="tabButtonActive($el) ? 'text-white' : 'text-primary'"
+        class="relative z-20 inline-flex items-center justify-center w-1/4 md:py-3 py-2 md:text-sm text-xs font-semibold transition-all rounded-full cursor-pointer whitespace-nowrap text-primary dark:text-white"
+      >
+        <span class="overflow-hidden overflow-ellipsis">{skillCategory.name}</span>
+      </button>
+    ))}
+    <div x-ref="tabMarker" class="absolute left-1 z-10 w-1/4 h-full py-1 duration-300 ease-out" x-cloak>
+      <div class="w-full h-full bg-secondary rounded-full"></div>
+    </div>
+  </div>
+  <div class="relative flex items-center justify-center w-full p-5 mt-6 text-sm text-primary dark:text-white">
+    {skills.main.map((skillCategory: SkillCategory) => (
+      <div
+        x-bind:id="$id(tabId + '-content')"
+        x-show="tabContentActive($el)"
+        class="relative flex flex-row flex-wrap justify-center items-center md:gap-x-16 gap-x-8 md:gap-y-10 gap-y-6"
+      >
+        {skillCategory.items.map((skill: Skill) => (
+          <div class="flex flex-col justify-center items-center md:gap-4 gap-2">
+            <img src={skill.icon} alt={skill.name + ' skill icon'} class="md:h-10 h-8"/>
+            <span>{skill.name}</span>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
