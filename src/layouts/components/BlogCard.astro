@@ -3,6 +3,7 @@ import { Image } from "@astrojs/image/components";
 import config from "@/config/config.json";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
+import Button from "@/shortcodes/Button";
 
 const {
   summary_length,
@@ -42,11 +43,6 @@ const { title, image, date, categories } = data.data;
       }
     </li>
   </ul>
-  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
-  <a
-    class="btn btn-outline-primary btn-sm"
-    href={`/${projects_folder}/${data.slug}`}
-  >
-    read more
-  </a>
+  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}...</p>
+  <Button className="" label={"Read more"} link={`/${projects_folder}/${data.slug}`} style="solid" small/>
 </div>

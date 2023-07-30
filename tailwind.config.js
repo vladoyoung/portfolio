@@ -25,7 +25,6 @@ if (theme.fonts.font_family.secondary) {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  safelist: [{ pattern: /^swiper-/ }],
   darkMode: "class",
   theme: {
     screens: {
@@ -86,7 +85,7 @@ module.exports = {
             '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
             '50%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
           }
-      }
+      },
     },
   },
   plugins: [

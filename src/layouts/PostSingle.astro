@@ -1,10 +1,8 @@
 ---
 import BlogCard from "@/components/BlogCard.astro";
-import Share from "@/components/Share.astro";
 import config from "@/config/config.json";
 import Disqus from "@/helpers/Disqus";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import dateFormat from "@/lib/utils/dateFormat";
 import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "@astrojs/image/components";
@@ -52,17 +50,13 @@ const { title, description, categories, image, date, tags } = post.data;
               ))
             }
           </li>
-          <li class="mr-4 inline-block">
-            <FaRegClock className={"mr-2 -mt-1 inline-block"} />
-            {dateFormat(date)}
-          </li>
         </ul>
         <div class="content mb-10">
           <Content />
         </div>
         <div class="row items-start justify-between">
-          <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
-            <h5 class="mr-3">Tags :</h5>
+          <div class="mb-10 flex md:flex-row flex-col md:items-center items-start gap-4">
+            <h5>Tags:</h5>
             <ul>
               {
                 tags.map((tag: string) => (
@@ -77,15 +71,6 @@ const { title, description, categories, image, date, tags } = post.data;
                 ))
               }
             </ul>
-          </div>
-          <div class="flex items-center lg:col-4">
-            <h5 class="mr-3">Share :</h5>
-            <Share
-              className="social-icons"
-              title={title}
-              description={description}
-              slug={post.slug}
-            />
           </div>
         </div>
         <Disqus className="mt-20" client:load />

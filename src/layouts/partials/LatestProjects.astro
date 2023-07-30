@@ -1,0 +1,23 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser.astro";
+
+const { projects_folder } = config.settings;
+const posts = await getSinglePage(projects_folder);
+---
+
+<div class="section">
+    <div class="container">
+        <h2 class="h3 mb-12 text-center">Latest Projects</h2>
+        <div class="row justify-center gap-y-10">
+            {
+            posts?.slice(0, 2).map((post) => (
+                <div class="md:basis-1/2 basis-full">
+                    <BlogCard data={post} />
+                </div>
+            ))
+            }
+        </div>
+    </div>
+</div>

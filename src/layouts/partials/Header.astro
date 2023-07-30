@@ -4,6 +4,7 @@ import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5/index.js";
+import Button from "@/shortcodes/Button";
 
 export interface ChildNavigationLink {
   name: string;
@@ -135,12 +136,7 @@ const { pathname } = Astro.url;
       <ThemeSwitcher className="mr-5" />
       {
         navigation_button.enable && (
-          <a
-            class="btn btn-outline-primary btn-sm hidden lg:inline-block"
-            href={navigation_button.link}
-          >
-            {navigation_button.label}
-          </a>
+          <Button label={navigation_button.label} link={navigation_button.link} style="outline" small/>
         )
       }
     </div>

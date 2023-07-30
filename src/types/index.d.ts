@@ -15,4 +15,5 @@ export type Button = {
   enable: boolean;
   label: string;
   link: string;
+  small: boolean;
 };
