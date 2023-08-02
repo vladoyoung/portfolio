@@ -36,7 +36,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply block relative p-3 font-semibold text-dark transition hover:text-primary dark:text-darkmode-dark lg:px-2 lg:py-3;
+  @apply block relative p-3 font-semibold text-dark duration-300 hover:text-secondary dark:text-darkmode-dark lg:px-2 lg:py-3 cursor-pointer;
   > span {
     @apply block relative w-max before:content-[''] before:block before:h-1 before:w-1 before:bg-red-500 before:absolute lg:before:bottom-0 lg:translate-y-0 before:bottom-1/2 before:translate-y-1/2 lg:before:left-1/2 lg:before:right-0 before:-right-4 before:-translate-x-1/2 before:rounded-full before:opacity-0;
   }
