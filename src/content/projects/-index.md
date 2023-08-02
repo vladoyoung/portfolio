@@ -1,5 +1,5 @@
 ---
-title: "Latest Projects"
-meta_title: ""
-description: "this is meta description"
+title: "Latest **Projects**"
+meta_title: "Latest Projects"
+description: "Some of my recent work"
 ---

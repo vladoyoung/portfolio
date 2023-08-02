@@ -4,11 +4,11 @@ import { humanize } from "@/lib/utils/textConverter";
 const { tags, categories, allCategories } = Astro.props;
 ---
 
-<div class="lg:col-4 sticky top-10 h-max">
+<div class="lg:col-4 sticky top-32 h-max">
   <!-- categories -->
   <div class="mb-8">
     <h5 class="mb-6">Categories</h5>
-    <div class="rounded bg-theme-light p-8 dark:bg-darkmode-theme-light">
+    <div class="rounded bg-theme-light p-8 dark:bg-darkmode-theme-light border border-border dark:border-primary">
       <ul class="space-y-4">
         {
           categories.map((category: any) => {
@@ -33,7 +33,7 @@ const { tags, categories, allCategories } = Astro.props;
   <!-- tags -->
   <div class="">
     <h5 class="mb-6">Tags</h5>
-    <div class="rounded bg-theme-light p-6 dark:bg-darkmode-theme-light">
+    <div class="rounded bg-theme-light p-6 dark:bg-darkmode-theme-light border border-border dark:border-primary">
       <ul>
         {
           tags.map((tag: any) => {
