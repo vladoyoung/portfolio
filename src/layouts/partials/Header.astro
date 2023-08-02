@@ -23,7 +23,7 @@ const { navigation_button, settings } = config;
 const { pathname } = Astro.url;
 ---
 
-<header class={`header z-30 ${settings.sticky_header && "fixed top-0 w-full"}`}>
+<header class={`header z-30 ${settings.sticky_header && "sticky top-0 w-full bg-white dark:bg-darkmode-body"}`}>
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
@@ -53,7 +53,7 @@ const { pathname } = Astro.url;
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+      class="navbar-nav order-3 hidden w-full py-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:py-0 xl:space-x-8"
     >
       {
         main.map((menu) => (
@@ -101,7 +101,7 @@ const { pathname } = Astro.url;
                     "active"
                   }`}
                 >
-                  {menu.name}
+                  <span>{menu.name}</span>
                 </a>
               </li>
             )}
@@ -111,12 +111,7 @@ const { pathname } = Astro.url;
       {
         navigation_button.enable && (
           <li class="mt-4 inline-block lg:hidden">
-            <a
-              class="btn btn-outline-primary btn-sm"
-              href={navigation_button.link}
-            >
-              {navigation_button.label}
-            </a>
+            <Button label={navigation_button.label} link={navigation_button.link} style="outline" small/>
           </li>
         )
       }
@@ -136,7 +131,7 @@ const { pathname } = Astro.url;
       <ThemeSwitcher className="mr-5" />
       {
         navigation_button.enable && (
-          <Button label={navigation_button.label} link={navigation_button.link} style="outline" small/>
+          <Button className="lg:flex hidden" label={navigation_button.label} link={navigation_button.link} style="outline" small/>
         )
       }
     </div>
