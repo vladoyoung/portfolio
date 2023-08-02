@@ -1,9 +1,7 @@
 ---
-import Logo from "@/components/Logo.astro";
 import Social from "@/components/Social.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
-import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "./CallToAction.astro";
 
@@ -13,28 +11,17 @@ const { footer }: { footer: { name: string; url: string }[] } = menu;
 <CallToAction/>
 <footer class="bg-theme-light dark:bg-darkmode-theme-light border-t border-t-border dark:border-t-primary">
   <div class="container">
-    <div class="row items-center py-10">
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
-        <Logo />
+    <div class="flex flex-col justify-between items-center ld:py-10 py-8 gap-6">
+      <div class="flex flex-row gap-x-4 flex-wrap justify-center items-center">
+        {
+          footer.map((menu) => (
+            <a href={menu.url} class="p-1 inline-block hover:text-secondary duration-300">
+              {menu.name}
+            </a>
+          ))
+        }
       </div>
-      <div class="mb-8 text-center lg:col-6 lg:mb-0">
-        <ul>
-          {
-            footer.map((menu) => (
-              <li class="m-3 inline-block">
-                <a href={menu.url}>{menu.name}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:mt-0 lg:text-right">
-        <Social source={social.main} className="social-icons" />
-      </div>
-    </div>
-  </div>
-  <div class="border-t border-border py-7 dark:border-darkmode-border">
-    <div class="container text-center text-light dark:text-darkmode-light">
+      <Social/>
       <p set:html={markdownify(config.params.copyright)} />
     </div>
   </div>

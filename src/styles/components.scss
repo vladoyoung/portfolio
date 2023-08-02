@@ -20,20 +20,6 @@
   @apply mb-4 block font-secondary text-xl font-normal text-dark dark:text-darkmode-light;
 }
 
-// social icons
-.social-icons {
-  @apply space-x-4;
-  li {
-    @apply inline-block;
-    a {
-      @apply flex h-9 w-9 items-center justify-center rounded-full bg-primary text-center leading-9 text-white dark:bg-darkmode-primary dark:text-dark;
-      svg {
-        @apply h-4 w-4;
-      }
-    }
-  }
-}
-
 // notice
 .notice {
   @apply mb-6 rounded-lg border px-8 py-6;

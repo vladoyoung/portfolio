@@ -1,6 +1,6 @@
 ---
-const { source, className } = Astro.props;
 import DynamicIcon from "@/helpers/DynamicIcon";
+import social from "@/config/social.json";
 
 export interface ISocial {
   name: string;
@@ -9,18 +9,19 @@ export interface ISocial {
 }
 ---
 
-<ul class={className}>
+<ul class="space-x-4">
   {
-    source.map((social: ISocial) => (
-      <li>
+    social.main.map((social: ISocial) => (
+      <li class="inline-block">
         <a
           aria-label={social.name}
           href={social.link}
           target="_blank"
           rel="noopener noreferrer nofollow"
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-center leading-9 text-white dark:bg-darkmode-primary dark:text-dark hover:!bg-secondary hover:!text-white duration-300"
         >
           <span class="sr-only">{social.name}</span>
-          <DynamicIcon class="inline-block" icon={social.icon} />
+          <DynamicIcon className="inline-block h-4 w-4" icon={social.icon} />
         </a>
       </li>
     ))
