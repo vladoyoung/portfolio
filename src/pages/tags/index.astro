@@ -2,7 +2,7 @@
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
-import { humanize } from "@/lib/utils/textConverter";
+import { humanize, slugify } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader.astro";
 
 const { projects_folder }: { projects_folder: string } = config.settings;
@@ -21,7 +21,7 @@ const allTags = await getAllTaxonomy(projects_folder, "tags");
             return (
               <li class="m-3 inline-block">
                 <a
-                  href={`/tags/${tag}`}
+                  href={`/tags/${slugify(tag)}`}
                   class="block rounded bg-theme-light px-4 py-2 text-xl text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark"
                 >
                   {humanize(tag)}{" "}

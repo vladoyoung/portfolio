@@ -10,7 +10,7 @@ export const getTaxonomy = async (collection: string, name: string) => {
   for (let i = 0; i < taxonomyPages.length; i++) {
     const categoryArray = taxonomyPages[i];
     for (let j = 0; j < categoryArray.length; j++) {
-      taxonomies.push(slugify(categoryArray[j]));
+      taxonomies.push(categoryArray[j]);
     }
   }
   const taxonomy = [...new Set(taxonomies)];
@@ -24,7 +24,7 @@ export const getAllTaxonomy = async (collection: string, name: string) => {
   for (let i = 0; i < taxonomyPages.length; i++) {
     const categoryArray = taxonomyPages[i];
     for (let j = 0; j < categoryArray.length; j++) {
-      taxonomies.push(slugify(categoryArray[j]));
+      taxonomies.push(categoryArray[j]);
     }
   }
   return taxonomies;

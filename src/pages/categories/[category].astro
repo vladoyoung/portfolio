@@ -6,6 +6,7 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import PageHeader from "@/partials/PageHeader.astro";
+import { slugify } from "@/lib/utils/textConverter";
 
 export async function getStaticPaths() {
   const categories = await getTaxonomy(
@@ -14,19 +15,22 @@ export async function getStaticPaths() {
   );
 
   return categories.map((category) => {
+    const categorySlug = slugify(category)
     return {
-      params: { category },
+      params: { category: categorySlug },
+      props: { categoryTitle: category },
     };
   });
 }
 
 const { category } = Astro.params;
+const { categoryTitle } = Astro.props
 const posts = await getSinglePage(config.settings.projects_folder);
 const filterByCategories = taxonomyFilter(posts, "categories", category!);
 ---
 
-<Base title={category}>
-  <PageHeader title={category} />
+<Base title={categoryTitle}>
+  <PageHeader title={categoryTitle} />
   <div class="section-sm pb-0">
     <div class="container">
       <div class="row">
