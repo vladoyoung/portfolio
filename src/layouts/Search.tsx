@@ -7,6 +7,7 @@ import {
   FaRegUserCircle,
   FaSearch,
 } from "react-icons/fa/index.js";
+import Button from "./shortcodes/Button";
 
 const { summary_length, projects_folder } = config.settings;
 
@@ -120,46 +121,45 @@ const Search = ({ searchList }: Props) => {
           ) : (
             searchResults?.map(({ item }, index) => (
               <div className="mb-12 md:col-6 lg:col-4" key={`search-${index}`}>
-                <div className="bg-body dark:bg-darkmode-body">
+                <div className="bg-theme-light dark:bg-darkmode-theme-light rounded border border-border dark:border-primary">
                   {item.data.image && (
-                    <img
-                      className="mb-6 w-full rounded"
-                      src={item.data.image}
-                      alt={item.data.title}
-                      width={445}
-                      height={230}
-                    />
-                  )}
-                  <h4 className="mb-3">
                     <a href={`/${projects_folder}/${item.slug}`}>
-                      {item.data.title}
+                      <img
+                        className="w-full rounded-t"
+                        src={item.data.image}
+                        alt={item.data.title}
+                        width={512}
+                        height={256}
+                      />
                     </a>
-                  </h4>
-                  <ul className="mb-4">
-                    <li className="mr-4 inline-block">
-                      <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
-                      {item.data.categories.map(
-                        (category: string, index: number) => (
-                          <a
-                            href={`/categories/${slugify(category)}`}
-                            key={category}
-                          >
-                            {humanize(category)}
-                            {index !== item.data.categories.length - 1 && ", "}
-                          </a>
-                        )
-                      )}
-                    </li>
-                  </ul>
-                  <p className="mb-6">
-                    {plainify(item.content?.slice(0, Number(summary_length)))}
-                  </p>
-                  <a
-                    className="btn btn-outline-primary btn-sm"
-                    href={`/${projects_folder}/${item.slug}`}
-                  >
-                    read more
-                  </a>
+                  )}
+                  <div className="md:p-8 p-6">
+                    <h4 className="mb-3 font-semibold">
+                      <a href={`/${projects_folder}/${item.slug}`}>
+                        {item.data.title}
+                      </a>
+                    </h4>
+                    <ul className="mb-4">
+                      <li className="mr-4 inline-block">
+                        <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
+                        {item.data.categories.map(
+                          (category: string, index: number) => (
+                            <a
+                              href={`/categories/${slugify(category)}`}
+                              key={category}
+                            >
+                              {humanize(category)}
+                              {index !== item.data.categories.length - 1 && ", "}
+                            </a>
+                          )
+                        )}
+                      </li>
+                    </ul>
+                    <p className="mb-6">
+                      {plainify(item.content?.slice(0, Number(summary_length)))}
+                    </p>
+                    <Button label={'Read more'} link={`/${projects_folder}/${item.slug}`} style="primary" small/>
+                  </div>
                 </div>
               </div>
             ))
