@@ -1,7 +1,7 @@
 ---
 title: "💬 Wanna **chat?**"
 meta_title: "Contact"
-description: "Get in touch with me!"
+description: "Get in touch!"
 draft: false
 ---
 
