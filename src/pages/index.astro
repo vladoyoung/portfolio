@@ -109,7 +109,7 @@ const { banner, about }: Homepage = homepage.data;
   <section class={`section bg-theme-light dark:bg-darkmode-theme-light`}>
     <div class="container flex lg:flex-row flex-col gap-20">
       <div class="basis-1/2">
-        <h2 set:html={markdownify(about.title)} class="mb-4 [&>strong]:text-secondary" />
+        <h2 set:html={markdownify(about.title)} class="mb-4 strong-red" />
         <p set:html={markdownify(about.description)} class="mb-8 text-lg" />
         {
           banner.button.enable && (

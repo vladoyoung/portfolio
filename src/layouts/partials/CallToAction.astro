@@ -19,7 +19,7 @@ const { href } = Astro.url
               />
               <h2
                 set:html={markdownify(call_to_action.data.title)}
-                class="mb-6 [&>strong]:text-secondary"
+                class="mb-6 strong-red"
               />
               {call_to_action.data.button.enable && (
                 <Button label={call_to_action.data.button.label} link={call_to_action.data.button.link} style="solid"/>

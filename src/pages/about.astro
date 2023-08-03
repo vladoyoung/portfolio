@@ -35,7 +35,7 @@ const { title, description, meta_title, image } = entry.data;
               </div>
             )
           }
-          <h1 set:html={markdownify(title)} class="h2 mb-6 [&>strong]:text-secondary" />
+          <h1 set:html={markdownify(title)} class="h2 mb-6 strong-red" />
           <div class="content lg:text-base text-sm !leading-relaxed">
             <Content />
           </div>
