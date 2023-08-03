@@ -111,7 +111,7 @@ const { pathname } = Astro.url;
       {
         navigation_button.enable && (
           <li class="mt-4 inline-block lg:hidden">
-            <Button label={navigation_button.label} link={navigation_button.link} style="outline" small/>
+            <Button label={navigation_button.label} link={navigation_button.link} target="_blank" style="outline" small/>
           </li>
         )
       }
@@ -131,7 +131,7 @@ const { pathname } = Astro.url;
       <ThemeSwitcher className="mr-5" />
       {
         navigation_button.enable && (
-          <Button className="lg:flex hidden" label={navigation_button.label} link={navigation_button.link} style="outline" small/>
+          <Button className="lg:flex hidden" label={navigation_button.label} link={navigation_button.link} target="_blank" style="outline" small/>
         )
       }
     </div>

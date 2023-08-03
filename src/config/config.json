@@ -30,7 +30,7 @@
   "navigation_button": {
     "enable": true,
     "label": "Resume/CV",
-    "link": "https://github.com/zeon-studio/astroplate"
+    "link": "/documents/Vladislav_Nikolov_CV_(Full-Stack_Web_Developer).pdf"
   },
 
   "metadata": {
