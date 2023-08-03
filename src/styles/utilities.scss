@@ -38,3 +38,7 @@
     @apply m-0 object-cover col-span-1;
   }
 }
+
+.tag {
+  @apply m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-dark border border-border dark:border-primary duration-300;
+}
