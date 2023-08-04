@@ -132,7 +132,7 @@
     @apply relative top-1/2 z-50 mx-auto max-w-[90%] -translate-y-1/2 rounded-lg bg-body p-8 dark:bg-darkmode-body;
   }
   &-close {
-    @apply absolute right-3 top-3 h-8 w-8 rounded-full bg-theme-light text-center leading-8 text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark;
+    @apply absolute right-3 top-3 h-8 w-8 rounded-full bg-theme-light text-center leading-8 text-dark dark:bg-darkmode-theme-light dark:text-white;
   }
 }
 

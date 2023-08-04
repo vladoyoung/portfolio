@@ -52,7 +52,6 @@ module.exports = {
         darkmode: {
           text: theme.colors.darkmode.text_color.default,
           light: theme.colors.darkmode.text_color.light,
-          dark: theme.colors.darkmode.text_color.dark,
           primary: theme.colors.darkmode.theme_color.primary,
           secondary: theme.colors.darkmode.theme_color.secondary,
           body: theme.colors.darkmode.theme_color.body,
