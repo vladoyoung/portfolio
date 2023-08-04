@@ -14,18 +14,18 @@ const allCategories = await getAllTaxonomy(projects_folder, "categories");
   <PageHeader title={"Categories"} />
   <section class="section">
     <div class="container text-center">
-      <ul>
+      <ul class="flex flex-row flex-wrap justify-center items-center md:gap-5 gap-3">
         {
           categories.map((category: string) => {
             const count = allCategories.filter((c) => c === category).length;
             return (
-              <li class="m-3 inline-block">
+              <li class="inline-block">
                 <a
                   href={`/categories/${slugify(category)}`}
-                  class="block rounded bg-theme-light px-4 py-2 text-xl text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark"
+                  class="tag-category-big"
                 >
                   {humanize(category)}{" "}
-                  <span class="ml-2 rounded bg-body px-2 dark:bg-darkmode-body">
+                  <span class="count">
                     {count}
                   </span>
                 </a>
