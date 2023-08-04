@@ -33,9 +33,7 @@
   "fonts": {
     "font_family": {
       "primary": "Poppins:wght@400;600;700",
-      "primary_type": "cursive",
-      "secondary": "Poppins:wght@400;600;700",
-      "secondary_type": "cursive"
+      "primary_type": "cursive"
     },
     "font_size": {
       "base": "16",
