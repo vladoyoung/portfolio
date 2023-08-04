@@ -7,7 +7,7 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader.astro";
-import PostSidebar from "@/partials/PostSidebar.astro";
+import ProjectSidebar from "@/partials/ProjectSidebar.astro";
 import { getEntryBySlug } from "astro:content";
 
 const { projects_folder } = config.settings;
@@ -69,7 +69,7 @@ export async function getStaticPaths() {
         </div>
 
         <!-- sidebar -->
-        <PostSidebar
+        <ProjectSidebar
           categories={categories}
           tags={tags}
           allCategories={allCategories}
