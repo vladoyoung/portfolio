@@ -52,6 +52,7 @@
 
 .strong-red {
   strong, b {
-    @apply text-secondary;
+    // Important interpolation class
+    @apply text-secondary #{!important};
   }
 }
