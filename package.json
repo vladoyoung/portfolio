@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "format": "prettier -w ./src",
-    "generate-json": "node scripts/jsonGenerator.js",
+    "generate-json": "node scripts/jsonGenerator.js"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
