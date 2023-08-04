@@ -30,13 +30,13 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
   <PageHeader title={postIndex.data.title} />
   <section class="section">
     <div class="container">
-      <div class="row gx-5">
+      <div class="flex lg:flex-row flex-col gap-8">
         <!-- blog posts -->
-        <div class="lg:col-8">
-          <div class="row">
+        <div class="lg:w-8/12 flex flex-col gap-y-10">
+          <div class="grid md:grid-cols-2 grid-cols-1 gap-x-8 md:gap-y-12 gap-y-10">
             {
               currentPosts.map((post) => (
-                <div class="mb-14 md:col-6">
+                <div class="col-span-1">
                   <BlogCard data={post} />
                 </div>
               ))

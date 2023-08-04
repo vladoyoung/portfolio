@@ -29,11 +29,9 @@ const { Content } = await page.render();
   <PageHeader title={title} />
   <section class="section-sm">
     <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-10">
-          <div class="content">
-            <Content />
-          </div>
+      <div class="flex justify-center items-center">
+        <div class="content lg:max-w-5xl max-w-full">
+          <Content />
         </div>
       </div>
     </div>

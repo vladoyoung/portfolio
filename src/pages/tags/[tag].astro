@@ -31,10 +31,10 @@ const filterByCategories = taxonomyFilter(posts, "tags", tag!);
   <PageHeader title={tagTitle} />
   <div class="section-sm pb-0">
     <div class="container">
-      <div class="row">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-8 md:gap-y-12 gap-y-10">
         {
           filterByCategories.map((post) => (
-            <div class="mb-14 md:col-6 lg:col-4">
+            <div class="col-span-1">
               <BlogCard data={post} />
             </div>
           ))

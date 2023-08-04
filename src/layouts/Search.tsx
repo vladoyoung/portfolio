@@ -71,8 +71,8 @@ const Search = ({ searchList }: Props) => {
   return (
     <section className="section-sm">
       <div className="container">
-        <div className="row mb-10 justify-center">
-          <div className="lg:col-8">
+        <div className="flex mb-10 justify-center">
+          <div className="max-w-3xl w-full">
             <div className="flex flex-nowrap">
               <input
                 className="form-input rounded-r-none"
@@ -101,9 +101,9 @@ const Search = ({ searchList }: Props) => {
             for '{inputVal}'
           </div>
         )} */}
-        <div className="row">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-8 sm:gap-y-12 gap-y-8">
           {searchResults?.length < 1 ? (
-            <div className="mx-auto pt-5 text-center">
+            <div className="mx-auto pt-5 text-center col-span-full">
               <img
                 className="mx-auto mb-6"
                 src="/images/no-search-found.png"
@@ -120,7 +120,7 @@ const Search = ({ searchList }: Props) => {
             </div>
           ) : (
             searchResults?.map(({ item }, index) => (
-              <div className="mb-12 md:col-6 lg:col-4" key={`search-${index}`}>
+              <div className="" key={`search-${index}`}>
                 <div className="bg-theme-light dark:bg-darkmode-theme-light rounded border border-border dark:border-primary">
                   {item.data.image && (
                     <a href={`/${projects_folder}/${item.slug}`}>
