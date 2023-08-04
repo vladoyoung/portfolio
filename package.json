@@ -10,7 +10,6 @@
     "build": "astro build",
     "format": "prettier -w ./src",
     "generate-json": "node scripts/jsonGenerator.js",
-    "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
