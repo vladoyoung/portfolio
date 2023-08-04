@@ -41,7 +41,6 @@ module.exports = {
     extend: {
       colors: {
         text: theme.colors.default.text_color.default,
-        light: theme.colors.default.text_color.light,
         dark: theme.colors.default.text_color.dark,
         primary: theme.colors.default.theme_color.primary,
         secondary: theme.colors.default.theme_color.secondary,
