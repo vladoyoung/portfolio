@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -35,7 +35,7 @@ const filterByCategories = taxonomyFilter(posts, "tags", tag!);
         {
           filterByCategories.map((post) => (
             <div class="col-span-1">
-              <BlogCard data={post} />
+              <ProjectCard data={post} />
             </div>
           ))
         }

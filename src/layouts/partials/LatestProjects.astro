@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import config from "@/config/config.json";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
@@ -15,7 +15,7 @@ const sortedPosts = sortByDate(posts);
         <div class="grid md:grid-cols-2 grid-col-1 justify-center gap-8">
             {
             sortedPosts?.slice(0, 2).map((post) => (
-                <BlogCard data={post} />
+                <ProjectCard data={post} />
             ))
             }
         </div>
