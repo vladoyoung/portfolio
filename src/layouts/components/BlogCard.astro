@@ -13,7 +13,7 @@ const { data } = Astro.props;
 const { title, image, date, categories } = data.data;
 ---
 
-<div class="bg-theme-light dark:bg-darkmode-theme-light rounded border border-border dark:border-primary">
+<div class="bg-theme-light dark:bg-darkmode-theme-light rounded border border-gray dark:border-primary">
   {
     image && (
       <a href={`/${projects_folder}/${data.slug}`}>

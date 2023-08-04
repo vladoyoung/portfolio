@@ -121,7 +121,7 @@ const Search = ({ searchList }: Props) => {
           ) : (
             searchResults?.map(({ item }, index) => (
               <div className="" key={`search-${index}`}>
-                <div className="bg-theme-light dark:bg-darkmode-theme-light rounded border border-border dark:border-primary">
+                <div className="bg-theme-light dark:bg-darkmode-theme-light rounded border border-gray dark:border-primary">
                   {item.data.image && (
                     <a href={`/${projects_folder}/${item.slug}`}>
                       <img

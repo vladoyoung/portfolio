@@ -40,13 +40,13 @@
 }
 
 .tag {
-  @apply m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-dark border border-border dark:border-primary duration-300;
+  @apply m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-dark border border-gray dark:border-primary duration-300;
 }
 
 .tag-category-big {
-  @apply block rounded bg-theme-light px-4 py-2 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark border border-border dark:border-primary duration-300 md:text-xl text-lg;
+  @apply block rounded bg-theme-light px-4 py-2 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark border border-gray dark:border-primary duration-300 md:text-xl text-lg;
   span.count {
-    @apply ml-2 rounded bg-body px-2 dark:bg-darkmode-body border border-border dark:border-primary text-primary dark:text-white;
+    @apply ml-2 rounded bg-body px-2 dark:bg-darkmode-body border border-gray dark:border-primary text-primary dark:text-white;
   }
 }
 

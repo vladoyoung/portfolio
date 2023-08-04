@@ -8,7 +8,7 @@ const { title = "" }: { title?: string } = Astro.props;
 <section>
   <div class="container text-center">
     <div
-      class="rounded-b bg-theme-light dark:bg-darkmode-theme-light border-t-0 border border-border dark:border-primary md:px-8 px-4 md:py-14 py-8"
+      class="rounded-b bg-theme-light dark:bg-darkmode-theme-light border-t-0 border border-gray dark:border-primary md:px-8 px-4 md:py-14 py-8"
     >
       <h1 class="sm:h1 h2 strong-red" set:html={markdownify(title)} />
       <Breadcrumbs className="mt-6" />

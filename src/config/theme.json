@@ -5,7 +5,7 @@
         "primary": "#404040",
         "secondary": "#e25858",
         "body": "#fff",
-        "border": "#bababa",
+        "gray": "#bababa",
         "theme_light": "#FAFAFA",
         "theme_dark": "#404040"
       },
