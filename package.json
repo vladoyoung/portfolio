@@ -8,8 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "format": "prettier -w ./src",
-    "generate-json": "node scripts/jsonGenerator.js"
+    "format": "prettier -w ./src"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
