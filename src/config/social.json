@@ -4,13 +4,11 @@
       "name": "linkedin",
       "icon": "FaLinkedinIn",
       "link": "https://www.linkedin.com/"
-    }
-  ],
-  "commented_out": [
+    },
     {
       "name": "github",
       "icon": "FaGithub",
-      "link": "https://www.github.com/"
+      "link": "https://www.github.com/vladoyoung"
     }
   ]
 }
