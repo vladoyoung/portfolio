@@ -6,4 +6,4 @@ image: "/images/me.jpg"
 draft: false
 ---
 
-I want to help you build your product whilst growing with the next generation of programmers! As a Full-Stack Web Developer with 8+ years of experience creating, managing and perfecting websites from LAMP to JAM tech stacks. The constant desire for continuous growth is what keeps me going. You can find out more about me on my resume/CV or LinkedIn profile!
+I want to help you build your product whilst growing with the next generation of programmers! With over 8 years of experience as a Full-Stack Web Developer, I've been involved in crafting, overseeing, and refining websites across various tech stacks, such as LAMP to JAM The constant desire for continuous growth is what keeps me going. You can find out more about me on my resume/CV or LinkedIn profile!

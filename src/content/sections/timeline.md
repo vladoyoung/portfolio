@@ -7,27 +7,27 @@ entries:
   - title: "Interest in web and programming sparked"
     duration: "2014"
     emoji: "💥"
-    content: "After finding out that Accounting was not for me in High School, I decided to look into something else, and that something was the thing I was using every day - the web! My first interest in HTML and CSS was eye-opening. After my first steps in learning the basics I started experimenting with my own little projects and soon I was helping my school with their website and content management!"
+    content: "Upon realizing that Accounting wasn't for me in High School, I sought a different path, which led me to explore something I interacted with daily - the web! My initial curiosity about HTML and CSS was truly enlightening. As I delved into learning the fundamentals, I began experimenting with personal projects. Before long, I found myself assisting my school in managing their website and content."
 
   - title: "Landing my first job"
     duration: "2015"
     emoji: "👔"
-    content: "I've always helped my dad with his catering business as an actual first job but for my first relevant opportunity I got the chance to work in a local web agency. A friend of mine reached out and got me in touch with the CEO of the company. They were impressed with what I can do so far and offered me a remote part-time job! I worked on simple HTML, CSS, JS and PHP mockup-to-website projects which gave me a good initial boost in my career!"
+    content: "My initial experience working was helping my dad with his catering business, which was my very first job. However, my first significant opportunity came when I got the chance to work at a local web agency. A friend connected me with the CEO of the company, and they were impressed with my skills, offering me a remote part-time job. In this role, I worked on converting mockups to websites using HTML, CSS, JS, and PHP. These projects provided a solid start to my career journey."
 
   - title: "Got accepted at The University of Bradford"
     duration: "2016"
     emoji: "📖"
-    content: "I was accepted in the five universities I applied to actually, but I chose Bradford because the degree I was about to take was prestigious there at the time, and the city is also comfortably cheap for a foreign Bulgarian student! Here I started forming some of my best memories, experiences and connections!"
+    content: "I got accepted into all five universities I applied to, but I ultimately chose Bradford. The degree I was interested in pursuing had a strong reputation there, and the city was affordable for an international student like me coming from Bulgaria. During my time at Bradford, I made cherished memories, gained valuable experiences, and formed meaningful connections."
 
   - title: "Education, Sports and Freelancing"
     duration: "2016 - 2019"
     emoji: "🦾"
-    content: "In my first year of university I started my first freelance job as a Data Entry and Virtual Assistant in my cousin's merch business, learning a lot about content and data management, SEO, marketing and business management. My second year at uni comprised of heavy assignments and me taking up a Project Manager role in the university's digital academy. There I had the rewarding experience of managing a small team of graphic designers while collaborating with the Bradford City Council. I also spun up my own little merch dropshipping business! In my third year I focused on my final project, whilst starting as a Freelance Web Developer in my friend and lecturer's firm. Throughout the years I tried archery and picked up volleyball, playing as a middle hitter in the university team. In July 2019 I graduated with first class honours! 🎉"
+    content: "During my first year at university, I embarked on my first freelance venture as a Data Entry and Virtual Assistant for my cousin's merchandise business. This opportunity exposed me to content and data management, SEO, marketing, and business operations. <br/> <br/> In my second university year, I faced rigorous assignments while simultaneously assuming the role of Project Manager at the university's digital academy. This role allowed me to lead a small team of graphic designers and collaborate with the Bradford City Council. In addition, I started my own dropshipping merch business. <br/> <br/> Transitioning to my third year, I concentrated on my final project while simultaneously commencing work as a Freelance Web Developer for a firm owned by a friend and lecturer of mine. Outside of academics, I engaged in archery and took up volleyball, participating as a middle hitter in the university team. This journey culminated in my graduation in July 2019, where I achieved first-class honours. 🎉"
 
-  - title: "Junior Web Developer"
+  - title: "Web Developer"
     duration: "Feb 2019 - Jan 2020"
     emoji: "👨‍💻"
-    content: "In <a href='https://spotlightstudios.co.uk/' target='_blank'>Spotlight Studios</a> we focused on CMS development with WordPress and WooCommerce. Utilising my proficiency in HTML, CSS, JavaScript (Vanilla and ES6), AJAX, PHP, Git, Gulp/Grunt and NPM, I played a key role in creating bespoke websites that are visually appealing, functionally robust and tailored to meet the specific needs of clients."
+    content: "In <a href='https://spotlightstudios.co.uk/' target='_blank'>Spotlight Studios</a> our main focus was on CMS development using WordPress and WooCommerce. My role involved leveraging my expertise in HTML, CSS, JavaScript (both Vanilla and ES6), AJAX, PHP, Git, Gulp/Grunt, and NPM. This enabled me to contribute significantly to the creation of custom websites that were not only visually engaging but also functionally strong, designed to cater to the unique requirements of our clients."
 
   - title: "Full-stack Web Developer"
     duration: "Jan 2020 - Oct 2023"
@@ -37,5 +37,5 @@ entries:
   - title: "Growing, Growing, Growing"
     duration: "2023 and beyond"
     emoji: "🧪"
-    content: "You can't be a developer and not improve every day. My plans include career and personal growth and potentially starting my own web agency down the road. Let's see what the future brings!"
+    content: "Continuous improvement is essential for developers. My intention is to prioritize both my career and personal development in the upcoming years. I have an open mind and curiosity for a wide range of topics, even those that might not seem immediately useful! Let's see what the future brings!"
 ---
