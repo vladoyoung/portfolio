@@ -18,7 +18,7 @@ export interface SkillCategory {
     {skills.main.map((skillCategory: SkillCategory) => (
       skillCategory.items.slice(0, 3).map((skill: Skill) => (
           <div class="flex flex-col justify-center items-center gap-4">
-            <img src={skill.icon} alt={skill.name + ' skill icon'} class="h-10"/>
+            <img src={skill.icon} alt={skill.name + ' skill icon'} class="h-10" loading="lazy"/>
             <span>{skill.name}</span>
           </div>
       ))

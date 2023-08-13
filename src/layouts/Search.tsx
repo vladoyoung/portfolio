@@ -130,6 +130,7 @@ const Search = ({ searchList }: Props) => {
                         alt={item.data.title}
                         width={512}
                         height={256}
+                        loading="lazy"
                       />
                     </a>
                   )}

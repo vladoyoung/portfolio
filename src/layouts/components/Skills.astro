@@ -58,7 +58,7 @@ export interface SkillCategory {
       >
         {skillCategory.items.map((skill: Skill) => (
           <div class="flex flex-col justify-center items-center md:gap-4 gap-2">
-            <img src={skill.icon} alt={skill.name + ' skill icon'} class="md:h-10 h-8"/>
+            <img src={skill.icon} alt={skill.name + ' skill icon'} class="md:h-10 h-8" loading="lazy"/>
             <span>{skill.name}</span>
           </div>
         ))}
