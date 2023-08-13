@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
@@ -24,12 +23,12 @@ const { title, description, meta_title, image } = entry.data;
           {
             image && (
               <div class="relative mx-auto w-max">
-                <Image
+                <img
                   class="mb-6 animate-morph"
                   src={image}
                   width={200}
                   height={200}
-                  alt={title}
+                  alt={'Me!'}
                 />
                 <div class="border-4 border-white/50 dark:border-black/50 animate-morph absolute w-full h-full top-0 left-0"></div>
               </div>

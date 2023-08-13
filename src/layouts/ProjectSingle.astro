@@ -4,12 +4,7 @@ import config from "@/config/config.json";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import { Image } from "@astrojs/image/components";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa/index.js";
+import { FaRegFolder } from "react-icons/fa/index.js";
 
 const { projects_folder } = config.settings;
 const posts = await getSinglePage(projects_folder);
@@ -26,12 +21,13 @@ const { title, description, categories, image, date, tags } = post.data;
         {
           image && (
             <div class="mb-10">
-              <Image
+              <img
                 src={image}
                 height={512}
                 width={1024}
                 alt={title}
                 class="w-full rounded"
+                loading="lazy"
               />
             </div>
           )
