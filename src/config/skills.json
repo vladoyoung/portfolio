@@ -73,6 +73,18 @@
           "icon": "/images/skills/backend/sequelize.svg"
         },
         {
+          "name": "C",
+          "icon": "/images/skills/backend/c.svg"
+        },
+        {
+          "name": "Python",
+          "icon": "/images/skills/backend/python.svg"
+        },
+        {
+          "name": "Flask",
+          "icon": "/images/skills/backend/flask.svg"
+        },
+        {
           "name": "Docker",
           "icon": "/images/skills/backend/docker.svg"
         }
