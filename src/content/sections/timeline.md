@@ -34,8 +34,13 @@ entries:
     emoji: "⛵"
     content: "From WordPress and WooCommerce to modern headless JAMstack architectures using Node.js, Gatsby.js, Astro.js, Alpine.js, React.js, TailwindCSS and Netlify. Managing the codebase through peer- reviews on Github and Bitbucket and leveraging CMS platforms such as Contentful and Storyblok through RESTful and GraphQL APIs. Additionally, I managed projects from start to finish (KANBAN), developing skills in time management, emotional intelligence, and exceeding client expectations. I also supervised and mentored fellow developers, gaining a deeper understanding of code maintenance and debt, SOLID principles and project structure. That is just a glance of my contribution to <a href='https://thebiggerboat.co.uk/' target='_blank'>The Bigger Boat</a>"
 
+  - title: "Front-End Team Lead and Software Engineer"
+    duration: "Oct 2023 - Present"
+    emoji: "🗼"
+    content: "At <a href='https://www.myxrobotics.com/' target='_blank'>MYX</a> I managed a team of engineers, delivering high-quality features bi-weekly in an Agile environment while presenting progress to stakeholders. I led development through code reviews, focusing on code quality, performance, and developer experience, and mentored team members to foster growth and collaboration.<br/><br/>Contributed to building complex SPAs, including a geospatial navigation and management app built with React and Cesium.js for 3D visualization and various other internal applications. To maintain consistency, we implemented strict developer conventions, including conventional commits, semantic versioning, and automated pipelines with GitHub Actions for deployments and changelog generation.<br/><br/>Additionally, I enhanced REST APIs, refactored backend logic with ORMs, and performed PostgreSQL configurations, bridging the gap between front-end and back-end teams effectively."
+
   - title: "Growing, Growing, Growing"
-    duration: "2023 and beyond"
+    duration: "2025 and beyond"
     emoji: "🧪"
     content: "Continuous improvement is essential for developers. My intention is to prioritize both my career and personal development in the upcoming years. I have an open mind and curiosity for a wide range of topics, even those that might not seem immediately useful! Let's see what the future brings!"
 ---

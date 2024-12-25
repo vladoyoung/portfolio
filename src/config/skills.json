@@ -16,6 +16,18 @@
           "icon": "/images/skills/frontend/typescript.svg"
         },
         {
+          "name": "Svelte",
+          "icon": "/images/skills/frontend/svelte.svg"
+        },
+        {
+          "name": "Cesium",
+          "icon": "/images/skills/frontend/cesium.svg"
+        },
+        {
+          "name": "EJS",
+          "icon": "/images/skills/frontend/ejs.svg"
+        },
+        {
           "name": "JSX",
           "icon": "/images/skills/frontend/jsx.svg"
         },
@@ -32,24 +44,8 @@
           "icon": "/images/skills/frontend/styled_components.svg"
         },
         {
-          "name": "Astro",
-          "icon": "/images/skills/frontend/astro.svg"
-        },
-        {
-          "name": "Vite",
-          "icon": "/images/skills/frontend/vite.svg"
-        },
-        {
           "name": "Alpine",
           "icon": "/images/skills/frontend/alpine.svg"
-        },
-        {
-          "name": "Gatsby",
-          "icon": "/images/skills/frontend/gatsby.svg"
-        },
-        {
-          "name": "Webpack",
-          "icon": "/images/skills/frontend/webpack.svg"
         }
       ]
     },
@@ -65,12 +61,20 @@
           "icon": "/images/skills/backend/node.svg"
         },
         {
-          "name": "Docker",
-          "icon": "/images/skills/backend/docker.svg"
+          "name": "PostgreSQL",
+          "icon": "/images/skills/backend/postgresql.svg"
         },
         {
-          "name": "Mysql",
+          "name": "MySQL",
           "icon": "/images/skills/backend/mysql.svg"
+        },
+        {
+          "name": "Sequelize",
+          "icon": "/images/skills/backend/sequelize.svg"
+        },
+        {
+          "name": "Docker",
+          "icon": "/images/skills/backend/docker.svg"
         }
       ]
     },
@@ -78,8 +82,24 @@
       "name": "Infrastructure",
       "items": [
         {
+          "name": "Astro",
+          "icon": "/images/skills/frontend/astro.svg"
+        },
+        {
+          "name": "Vite",
+          "icon": "/images/skills/frontend/vite.svg"
+        },
+        {
           "name": "GraphQL",
           "icon": "/images/skills/infrastructure/graphql.svg"
+        },
+        {
+          "name": "Gatsby",
+          "icon": "/images/skills/frontend/gatsby.svg"
+        },
+        {
+          "name": "Webpack",
+          "icon": "/images/skills/frontend/webpack.svg"
         },
         {
           "name": "Github",
@@ -90,7 +110,7 @@
           "icon": "/images/skills/infrastructure/bitbucket.svg"
         },
         {
-          "name": "Npm",
+          "name": "NPM",
           "icon": "/images/skills/infrastructure/npm.svg"
         }
       ]

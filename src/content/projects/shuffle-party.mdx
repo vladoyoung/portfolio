@@ -1,0 +1,33 @@
+---
+title: "Shuffle Party"
+meta_title: "Shuffle Party"
+description: "My Harvard CS50x project that uses the Spotify API to create smart collaborative playlists."
+date: 2024-03-12
+image: "/images/projects/shuffle-party/shuffle-party-og-image.jpg"
+categories: ["SPA", "Private"]
+tags: ["Svelte", "Supabase", "Shadcn", "Typescript", "Vite"]
+draft: false
+---
+
+My Harvard CS50x project that uses the Spotify API to create smart collaborative playlists.
+
+<Button
+  label="See GitHub Repo"
+  link="https://github.com/vladoyoung/shuffle-party"
+  style="solid"
+  target="_blank"
+/>
+
+### The purpose
+
+This is a frontend application created for a final project submission for the Harvard CS50x course. Howerver, it's also a practical project I've been having in mind for some time.
+
+**Disclaimer:** For the official app on the Shuffle party website, I'm using the Spotify developer license/mode and since this is an app created primarily for private use, I have no plans of submitting for a commercial license. In order to use this app, you need to be added as a user manually.
+
+The purpose of it is to simplify a music listening game we do with my girlfriend. Up to this point, we used to open our Spotify liked songs playlists and take turns in choosing a song to play while having the "shuffle" option on. This is a two-person game/app for now. The person leading the "shuffle party" would queue the song that the other person got from the Spotify shuffle and shared verbally. The leader person's song gets queued automatically, because their device is the one playing the music. This process is repeated practically every two songs, when it's turn to queue up the non-leading person's song.
+
+The purpose of this game is to see how the taste of two people blindly choosing songs will turn out. The ultimate guilty pleasure, hard to listen to, cheesy and depressing songs mixer to test your music compatibility!
+
+This app has the purpose of removing the manual steps of the game in order to save time and electricity. Once you've logged in all you have to do is choose whether you want to mix or update your shared songs. At the moment each user contributes to the mix with 25 random songs from their liked songs library. The app will generate a new "Shuffle Party" Spotify public playlist containing the mixed songs from both the chosen user, and the one creating the mix.
+
+The app turned out to be more complicated than I expected, primarily because of the Spotify Auth methods and restrictions. Because of this, some extra steps are required from the users that I initially tried to avoid. But hey, it works and serves the ultimate purpose of reducing user input by about 48 times and saving 7-10 minutes for each 50 song shuffle party! With a couple of clicks you can generate an about 3-4 hours long mixed playlist you and your party buddy can enjoy!

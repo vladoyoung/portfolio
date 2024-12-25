@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Vladislav Nikolov - Full-Stack Web Developer",
+    "title": "Vladislav Nikolov - Front-End Team Lead and Software Engineer",
     "base_url": "https://vladislavnikolov.dev",
     "base_path": "/",
     "trailing_slash": false,
@@ -30,12 +30,12 @@
   "navigation_button": {
     "enable": true,
     "label": "Resume/CV",
-    "link": "/documents/Vladislav_Nikolov_CV_(Full-Stack_Web_Developer).pdf"
+    "link": "/documents/Vladislav_Nikolov_CV_(Front-End_Team_Lead_and_Software_Engineer).pdf"
   },
 
   "metadata": {
     "meta_author": "Vladislav Nikolov",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Vladislav Nikolov - Full-Stack Web Developer"
+    "meta_description": "Vladislav Nikolov - Front-End Team Lead and Software Engineer"
   }
 }

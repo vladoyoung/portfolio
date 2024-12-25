@@ -1,7 +1,7 @@
 ---
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import type { Button, Feature, Skill } from "@/types";
+import type { Button as ButtonType } from "@/types";
 import { getEntryBySlug } from "astro:content";
 import Button from "@/shortcodes/Button";
 import LatestProjects from "@/partials/LatestProjects.astro";
@@ -13,14 +13,14 @@ interface Homepage {
     title: string;
     subtitle: string;
     image: string;
-    button: Button;
+    button: ButtonType;
   };
   about: {
     title: string;
     description: string;
     skills_title: string;
     button: Button;
-  }
+  };
 }
 
 const homepage = await getEntryBySlug("homepage", "index");
@@ -29,33 +29,86 @@ const { banner, about }: Homepage = homepage.data;
 
 <Base>
   <!-- Banner -->
-  <section class="section min-h-screen flex justify-center items-center relative overflow-hidden">
+  <section
+    class="section min-h-screen flex justify-center items-center relative overflow-hidden"
+  >
     <!-- Parralax Effects -->
-    <div id="parallax-effects" class="absolute top-0 left-0 w-full h-full 2xl:opacity-50 opacity-30">
+    <div
+      id="parallax-effects"
+      class="absolute top-0 left-0 w-full h-full 2xl:opacity-50 opacity-30"
+    >
       <!-- Squares -->
-      <div class="w-40 h-40 border-2 border-gray absolute !top-0 !left-1/4" data-depth="0.5"></div>
-      <div class="w-full h-full absolute top-0 left-0 2xl:!block !hidden" data-depth="1">
-        <div class="w-60 h-60 border-2 border-gray absolute !top-1/4 !left-[80%] rotate-45"></div>
+      <div
+        class="w-40 h-40 border-2 border-gray absolute !top-0 !left-1/4"
+        data-depth="0.5"
+      >
       </div>
-      <div class="w-full h-full absolute top-0 left-0 xl:!block !hidden" data-depth="0.1">
-        <div class="w-[500px] h-[500px] border-2 border-gray !rotate-45 absolute bottom-[-5%]"></div>
+      <div
+        class="w-full h-full absolute top-0 left-0 2xl:!block !hidden"
+        data-depth="1"
+      >
+        <div
+          class="w-60 h-60 border-2 border-gray absolute !top-1/4 !left-[80%] rotate-45"
+        >
+        </div>
       </div>
-      <div class="w-full h-full absolute top-0 left-0 2xl:!block !hidden" data-depth="0.4">
-        <div class="w-[800px] h-[800px] border-2 border-gray !rotate-45 absolute top-1/4 right-[-20%]"></div>
+      <div
+        class="w-full h-full absolute top-0 left-0 xl:!block !hidden"
+        data-depth="0.1"
+      >
+        <div
+          class="w-[500px] h-[500px] border-2 border-gray !rotate-45 absolute bottom-[-5%]"
+        >
+        </div>
+      </div>
+      <div
+        class="w-full h-full absolute top-0 left-0 2xl:!block !hidden"
+        data-depth="0.4"
+      >
+        <div
+          class="w-[800px] h-[800px] border-2 border-gray !rotate-45 absolute top-1/4 right-[-20%]"
+        >
+        </div>
       </div>
       <!-- Rectangles -->
-      <div class="w-80 h-40 border-2 border-gray absolute !top-[90%] !left-1/4" data-depth="0.7"></div>
-      <div class="w-40 h-80 border-2 border-gray absolute !top-0 !left-[90%]" data-depth="1.4"></div>
+      <div
+        class="w-80 h-40 border-2 border-gray absolute !top-[90%] !left-1/4"
+        data-depth="0.7"
+      >
+      </div>
+      <div
+        class="w-40 h-80 border-2 border-gray absolute !top-0 !left-[90%]"
+        data-depth="1.4"
+      >
+      </div>
       <div class="w-full h-full absolute top-0 left-0" data-depth="0.3">
-        <div class="w-40 h-20 border-2 border-gray absolute !top-[95%] !left-[60%] rotate-12"></div>
+        <div
+          class="w-40 h-20 border-2 border-gray absolute !top-[95%] !left-[60%] rotate-12"
+        >
+        </div>
       </div>
       <div class="w-full h-full absolute top-0 left-0" data-depth="1.2">
-        <div class="w-80 h-40 border-2 border-gray absolute !top-0 !left-1/2 rotate-45"></div>
+        <div
+          class="w-80 h-40 border-2 border-gray absolute !top-0 !left-1/2 rotate-45"
+        >
+        </div>
       </div>
       <!-- Circles -->
-      <div class="w-80 h-80 border-2 border-gray absolute !top-0 !left-3/4 rounded-full" data-depth="0.2"></div>
-      <div class="w-[700px] h-[700px] border-2 border-gray absolute !top-0 !left-[-10%] rounded-full lg:!block !hidden" data-depth="0.8"></div>
-      <div class="w-[600px] h-[600px] border-2 border-gray absolute !top-[80%] !left-[80%] rounded-full" data-depth="0.9"></div>
+      <div
+        class="w-80 h-80 border-2 border-gray absolute !top-0 !left-3/4 rounded-full"
+        data-depth="0.2"
+      >
+      </div>
+      <div
+        class="w-[700px] h-[700px] border-2 border-gray absolute !top-0 !left-[-10%] rounded-full lg:!block !hidden"
+        data-depth="0.8"
+      >
+      </div>
+      <div
+        class="w-[600px] h-[600px] border-2 border-gray absolute !top-[80%] !left-[80%] rounded-full"
+        data-depth="0.9"
+      >
+      </div>
       <!-- Crosses -->
       <div class="w-full h-full absolute top-0 left-0" data-depth="0.7">
         <div class="flex justify-center items-center absolute top-1/2 left-0">
@@ -64,13 +117,17 @@ const { banner, about }: Homepage = homepage.data;
         </div>
       </div>
       <div class="w-full h-full absolute top-0 left-0" data-depth="1.5">
-        <div class="flex justify-center items-center absolute top-3/4 left-3/4 rotate-45">
+        <div
+          class="flex justify-center items-center absolute top-3/4 left-3/4 rotate-45"
+        >
           <div class="w-10 h-0.5 bg-gray"></div>
           <div class="w-10 h-0.5 bg-gray absolute top-0 left-0 rotate-90"></div>
         </div>
       </div>
       <div class="w-full h-full absolute top-0 left-0" data-depth="0.7">
-        <div class="flex justify-center items-center absolute top-1/4 left-1/4 rotate-45">
+        <div
+          class="flex justify-center items-center absolute top-1/4 left-1/4 rotate-45"
+        >
           <div class="w-20 h-0.5 bg-gray"></div>
           <div class="w-20 h-0.5 bg-gray absolute top-0 left-0 rotate-90"></div>
         </div>
@@ -78,23 +135,45 @@ const { banner, about }: Homepage = homepage.data;
     </div>
     <!-- /Parralax effects -->
     <div class="container relative">
-      <div class="flex md:flex-row flex-col justify-center items-center md:gap-16 gap-10">
+      <div
+        class="flex md:flex-row flex-col justify-center items-center md:gap-16 gap-10"
+      >
         <div class="basis-2/6">
           <div class="relative lg:max-w-[420px] max-w-[300px]">
-            <img class="w-full animate-morph" src="/images/me.jpg" alt="Me!" loading="lazy" width="420" height="420"/>
-            <div class="border-8 border-white/50 dark:border-black/50 animate-morph absolute w-full h-full top-0 left-0"></div>
+            <img
+              class="w-full animate-morph"
+              src="/images/me.jpg"
+              alt="Me!"
+              loading="lazy"
+              width="420"
+              height="420"
+            />
+            <div
+              class="border-8 border-white/50 dark:border-black/50 animate-morph absolute w-full h-full top-0 left-0"
+            >
+            </div>
           </div>
         </div>
         <div class="basis-4/6 md:text-left text-center">
-          <span set:html={markdownify(banner.label)} class="label lg:text-3xl md:text-2xl text-xl" />
+          <span
+            set:html={markdownify(banner.label)}
+            class="label lg:text-3xl md:text-2xl text-xl"
+          />
           <h1 class="mb-4 herotext">
             {markdownify(banner.title)}
-            <br/>
-            <strong class="text-secondary">{markdownify(banner.subtitle)}</strong>
+            <br />
+            <strong class="text-secondary"
+              >{markdownify(banner.subtitle)}</strong
+            >
           </h1>
           {
             banner.button.enable && (
-              <Button className="lg:mt-6 my-4" label={banner.button.label} link={banner.button.link} style="solid"/>
+              <Button
+                className="lg:mt-6 my-4"
+                label={banner.button.label}
+                link={banner.button.link}
+                style="solid"
+              />
             )
           }
         </div>
@@ -111,21 +190,28 @@ const { banner, about }: Homepage = homepage.data;
         <p set:html={markdownify(about.description)} class="mb-8 text-lg" />
         {
           banner.button.enable && (
-            <Button label={about.button.label} link={about.button.link} style="solid"/>
+            <Button
+              label={about.button.label}
+              link={about.button.link}
+              style="solid"
+            />
           )
         }
       </div>
       <div class="basis-1/2">
-        <SkillsShort/>
+        <SkillsShort />
       </div>
     </div>
   </section>
   <!-- /SkillsShort -->
 
-  <LatestProjects/>
+  <LatestProjects />
 </Base>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"
+></script>
 <script type="text/javascript">
   var scene = document.getElementById("parallax-effects");
   new Parallax(scene, {

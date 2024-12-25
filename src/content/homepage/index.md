@@ -3,7 +3,7 @@
 banner:
   label: "👋 Hi, I'm"
   title: "Vlad"
-  subtitle: "Full-Stack Web Developer"
+  subtitle: "Front-End Team Lead and Software Engineer"
   button:
     enable: true
     label: "Latest Projects"
@@ -12,7 +12,7 @@ banner:
 # About
 about:
   title: "🏗️ Let's **build** something!"
-  description: "My passion for innovation and continuous learning drives me to stay at the forefront of the industry, delivering high-quality solutions that exceed expectations and contribute to the success of every project I undertake."
+  description: "Delivering high-quality solutions that exceed expectations and contribute to the success of every project I undertake. From single-page applications to complex multilingual websites."
 
   button:
     enable: false
